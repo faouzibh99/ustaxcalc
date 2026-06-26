@@ -24,3 +24,14 @@
 body.dark .blog-card{background:#1A1A24}
 body.dark .article-container p,body.dark .article-container li{color:#C0C0D0}
 @media(max-width:580px){.blog-grid{grid-template-columns:1fr}}
+
+/* ── Fix: ensure btn-primary text is always white, even inside article containers ── */
+.article-cta .btn-primary,
+.article-container .btn-primary {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.article-cta .btn-primary:hover,
+.article-container .btn-primary:hover {
+  color: #ffffff !important;
+}
