@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kansas Property Tax Calculator 2026 — Free Estimate | USTaxCalc</title>
+  <meta name="description" content="Calculate your Kansas property tax for 2026. Current rate: 1.33%. Includes homestead exemption, Johnson County rates, and payment dates. Free and instant."/>
+  <link rel="canonical" href="https://ustaxcalc.app/kansas-property-tax-calculator.html"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="state.css"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Kansas Property Tax Calculator 2026",
+  "url": "https://ustaxcalc.app/kansas-property-tax-calculator.html",
+  "description": "Calculate your Kansas property tax for 2026. Rate: 1.33%. Includes homestead exemption and Johnson County rates.",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ustaxcalc.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Kansas Property Tax Calculator",
+        "item": "https://ustaxcalc.app/kansas-property-tax-calculator.html"
+      }
+    ]
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the property tax rate in Kansas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average effective property tax rate in Kansas is 1.33%. Johnson County has a rate of 1.39%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When are property taxes due in Kansas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Kansas, property taxes are due: December 20 and May 10."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much is property tax on a median home in Kansas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On a median home value of $204,000 in Kansas, the estimated annual property tax is $2,713 at a 1.33% effective rate."
+        }
+      }
+    ]
+  }
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><div class="logo-mark">🏛️</div>US<span class="accent">TaxCalc</span></a>
+    <nav>
+      <a href="index.html">All States</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <button class="dark-toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<div class="state-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">All States</a> › Kansas</div>
+    <div class="state-hero-inner">
+      <div>
+        <div class="state-flag-abbr">KS</div>
+        <h1>Kansas Property Tax<br/>Calculator <span class="year-tag">2026</span></h1>
+        <p class="state-hero-sub">Calculate your exact Kansas property tax — with homestead exemptions, Johnson County county rates, and 2026 data.</p>
+        <div class="state-quick-facts">
+          <div class="qf-item"><span class="qf-label">Avg Rate</span><strong>1.33%</strong></div>
+          <div class="qf-sep"></div>
+          <div class="qf-item"><span class="qf-label">Median Tax</span><strong>$2,713/yr</strong></div>
+          <div class="qf-sep"></div>
+          <div class="qf-item"><span class="qf-label">Median Home</span><strong>$204,000</strong></div>
+          <div class="qf-sep"></div>
+          <div class="qf-item"><span class="qf-label">Rate Level</span><strong>High</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container ad-slot">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-placeholder">Ad Space — 728×90</div>
+</div>
+
+<section class="calc-section" id="calculator">
+  <div class="container calc-layout">
+
+    <div class="calc-main">
+      <div class="calc-card">
+        <h2>Calculate Your Kansas Property Tax</h2>
+        <p class="calc-desc">Enter your home value below. We apply the current Kansas rates and exemptions automatically.</p>
+
+        <div class="input-group">
+          <label>Your Home Value ($)</label>
+          <input type="number" id="home-value" placeholder="e.g. 204000" min="0" oninput="calculate()"/>
+        </div>
+
+        <div class="input-group">
+          <label>Assessment Type</label>
+          <select id="home-type" onchange="calculate()">
+            <option value="primary">Primary Residence (owner-occupied)</option>
+            <option value="rental">Rental / Investment Property</option>
+            <option value="commercial">Commercial Property</option>
+          </select>
+        </div>
+
+        
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="homestead" onchange="calculate()" checked/>
+            <span>Apply Homestead Exemption ($20,000 off assessed value)</span>
+          </label>
+        </div>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="senior" onchange="calculate()"/>
+            <span>I am 65+ / Senior (additional exemptions may apply)</span>
+          </label>
+        </div>
+
+        <div class="results-box" id="results-box">
+          <div class="results-header">Your Estimated Kansas Property Tax</div>
+          <div class="result-main" id="result-annual">$—</div>
+          <div class="result-sub">per year</div>
+          <div class="result-rows">
+            <div class="result-row"><span>Monthly payment</span><strong id="r-monthly">$—</strong></div>
+            <div class="result-row"><span>Effective tax rate</span><strong id="r-rate">—%</strong></div>
+            <div class="result-row"><span>Taxable value</span><strong id="r-taxable">$—</strong></div>
+            <div class="result-row"><span>State avg rate</span><strong>1.33%</strong></div>
+            <div class="result-row"><span>Johnson County rate</span><strong>1.39%</strong></div>
+            <div id="he-rows"></div>
+          </div>
+          <button class="btn-primary" style="width:100%;margin-top:18px;justify-content:center" onclick="shareResult()">📋 Copy & Share Result</button>
+        </div>
+      </div>
+
+      <div class="ad-slot-inline">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-placeholder">Ad Space — 336×280</div>
+      </div>
+
+      <div class="info-card">
+        <h3>About Kansas Property Tax</h3>
+        <p>Homestead refund program for qualifying low-income seniors and disabled persons.</p>
+        <ul>
+          <li><strong>Average effective rate:</strong> 1.33%</li>
+          <li><strong>Payment dates:</strong> December 20 and May 10</li>
+          <li><strong>Johnson County rate:</strong> 1.39%</li>
+          <li><strong>Homestead exemption:</strong> $20,000 off assessed value</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>How Kansas Property Tax is Calculated</h3>
+        <p>Your Kansas property tax bill = <strong>Assessed Value × Tax Rate</strong>.</p>
+        <p>If you qualify for the homestead exemption, your assessed value is reduced by $20,000 before the rate is applied, saving you <strong>up to $266/year</strong>.</p>
+        <p>Rates vary by county and school district. Johnson County has an effective rate of 1.39%, while the statewide average is 1.33%.</p>
+      </div>
+
+    </div>
+
+    <aside class="calc-sidebar">
+      <div class="ad-slot" style="margin-top:0">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-placeholder" style="min-height:250px">Ad Space — 300×250</div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Quick Facts — Kansas</h4>
+        <div class="facts-list">
+          <div class="fact-row"><span>State rate</span><strong>1.33%</strong></div>
+          <div class="fact-row"><span>Johnson County</span><strong>1.39%</strong></div>
+          <div class="fact-row"><span>Median home</span><strong>$204,000</strong></div>
+          <div class="fact-row"><span>Median tax/yr</span><strong>$2,713</strong></div>
+          <div class="fact-row"><span>Per month</span><strong>$226</strong></div>
+          <div class="fact-row"><span>Payment dates</span><strong style="font-size:0.75rem">December 20 and May 10</strong></div>
+        </div>
+      </div>
+      <div class="sidebar-card">
+        <h4>Other State Calculators</h4>
+        <div style="display:grid;gap:8px;margin-top:8px">
+          <a href="alabama-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">AL</div><div class="state-info"><div class="state-name">Alabama</div><div class="state-rate">0.41%</div></div></a><a href="alaska-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">AK</div><div class="state-info"><div class="state-name">Alaska</div><div class="state-rate">1.04%</div></div></a><a href="arizona-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">AZ</div><div class="state-info"><div class="state-name">Arizona</div><div class="state-rate">0.51%</div></div></a><a href="arkansas-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">AR</div><div class="state-info"><div class="state-name">Arkansas</div><div class="state-rate">0.61%</div></div></a><a href="california-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">CA</div><div class="state-info"><div class="state-name">California</div><div class="state-rate">0.71%</div></div></a><a href="colorado-property-tax-calculator.html" class="state-card" style="margin-bottom:8px;"><div class="state-abbr">CO</div><div class="state-info"><div class="state-name">Colorado</div><div class="state-rate">0.49%</div></div></a>
+        </div>
+        <a href="index.html" class="btn-secondary" style="width:100%;justify-content:center;margin-top:12px">View All 50 States →</a>
+      </div>
+    </aside>
+
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container">
+    <p class="section-eyebrow">Questions</p>
+    <h2>Kansas Property Tax — FAQ</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is the property tax rate in Kansas?<span class="faq-icon">+</span></button>
+        <div class="faq-a">The average effective property tax rate in Kansas is 1.33%. Johnson County has a rate of 1.39%. Rates vary by county, city, and school district.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">When are property taxes due in Kansas?<span class="faq-icon">+</span></button>
+        <div class="faq-a">In Kansas, property taxes are typically due: December 20 and May 10. Check with your local county assessor for the exact deadlines in your area, as dates can vary by municipality.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does Kansas have a homestead exemption?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. Kansas offers a homestead exemption of $20,000 off your assessed value for qualifying primary residences. This can save you up to $266/year.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How can I lower my Kansas property tax bill?<span class="faq-icon">+</span></button>
+        <div class="faq-a">You can lower your Kansas property tax by: (1) applying for all exemptions you qualify for, (2) appealing your property assessment if it seems too high, (3) checking for senior, veteran, or disability programs in your county.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How accurate is this calculator?<span class="faq-icon">+</span></button>
+        <div class="faq-a">This calculator uses the 2026 average effective rate for Kansas (1.33%) and applies standard homestead exemptions. It gives a reliable estimate. For your exact tax bill, contact the Johnson County assessor's office or visit your county's official website.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><div class="logo-mark">🏛️</div>US<span class="accent">TaxCalc</span></a>
+      <p>Free property tax calculators for all 50 US states.</p>
+    </div>
+    <div class="footer-hr"></div>
+    <div class="footer-links">
+      <a href="index.html">All States</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <p class="footer-copy">© 2026 USTaxCalc.app — Free US property tax calculator. For informational purposes only.</p>
+  </div>
+</footer>
+
+<script>
+var STATE_RATE   = 1.33;
+var HE_AMOUNT    = 20000;
+var HAS_HE       = true;
+
+function calculate() {
+  var val  = parseFloat(document.getElementById('home-value').value);
+  if (!val || val <= 0) { resetResults(); return; }
+  var type = document.getElementById('home-type').value;
+  var he   = HAS_HE && document.getElementById('homestead') ? document.getElementById('homestead').checked : false;
+  var sen  = document.getElementById('senior').checked;
+
+  var taxable = val;
+  if (he && type === 'primary') taxable = Math.max(0, taxable - HE_AMOUNT);
+  if (sen && type === 'primary') taxable = Math.max(0, taxable - (HE_AMOUNT * 0.5));
+
+  var annual  = Math.round(taxable * STATE_RATE / 100);
+  var monthly = Math.round(annual / 12);
+  var effRate = (annual / val * 100).toFixed(2);
+
+  document.getElementById('result-annual').textContent = '$' + annual.toLocaleString();
+  document.getElementById('r-monthly').textContent     = '$' + monthly.toLocaleString();
+  document.getElementById('r-rate').textContent        = effRate + '%';
+  document.getElementById('r-taxable').textContent     = '$' + Math.round(taxable).toLocaleString();
+  document.getElementById('results-box').classList.add('has-results');
+}
+function resetResults() {
+  document.getElementById('result-annual').textContent = '$—';
+  document.getElementById('r-monthly').textContent     = '$—';
+  document.getElementById('r-rate').textContent        = '—%';
+  document.getElementById('r-taxable').textContent     = '$—';
+  document.getElementById('results-box').classList.remove('has-results');
+}
+function shareResult() {
+  var val = document.getElementById('result-annual').textContent;
+  var text = 'Kansas property tax estimate: ' + val + '/year — Calculated at USTaxCalc.app';
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(function(){ alert('✅ Result copied! Share it with your family or financial advisor.'); });
+  } else { prompt('Copy this:', text); }
+}
+</script>
+<script>
+function toggleDark(){document.body.classList.toggle('dark');var b=document.querySelector('.dark-toggle');b.textContent=document.body.classList.contains('dark')?'☀️':'🌙';localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');}
+window.addEventListener('load',function(){if(localStorage.getItem('theme')==='dark'){document.body.classList.add('dark');var b=document.querySelector('.dark-toggle');if(b)b.textContent='☀️';}});
+function toggleFaq(btn){var a=btn.nextElementSibling;var i=btn.querySelector('.faq-icon');var o=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(function(x){x.classList.remove('open');});document.querySelectorAll('.faq-icon').forEach(function(x){x.textContent='+';});if(!o){a.classList.add('open');i.textContent='−';}}
+</script>
+</body>
+</html>

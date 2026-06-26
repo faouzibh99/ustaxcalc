@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>US Property Tax Calculator 2026 — All 50 States | USTaxCalc</title>
+  <meta name="description" content="Free property tax calculator for all 50 US states. Get your exact annual property tax estimate with homestead exemptions, county rates, and 2026 data."/>
+  <link rel="canonical" href="https://ustaxcalc.app/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "USTaxCalc",
+  "url": "https://ustaxcalc.app",
+  "description": "Free property tax calculators for all 50 US states with 2026 data.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ustaxcalc.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">🏛️</div>
+      US<span class="accent">TaxCalc</span>
+    </a>
+    <nav>
+      <a href="index.html">All States</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <button class="dark-toggle" onclick="toggleDark()" title="Toggle dark mode">🌙</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="live-dot"></span>Free · No Sign-Up · 2026 Data · All 50 States</div>
+    <h1>US Property Tax<br/><em>Calculator 2026</em></h1>
+    <p class="hero-sub">Find your state below and calculate your exact property tax in 60 seconds — with homestead exemptions, county rates, and local rules included.</p>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-icon">✓</span><span>100% Free</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span>No Sign-Up</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span>2026 Tax Rates</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><span class="trust-icon">✓</span><span>All 50 States</span></div>
+      <div class="trust-sep"></div>
+      <div class="trust-item"><span class="trust-icon">⚡</span><span>Instant Results</span></div>
+    </div>
+    <a href="#states" class="btn-primary hero-btn">Choose Your State ↓</a>
+    <div class="hero-stats">
+      <div><strong>51</strong><span>States + DC</span></div>
+      <div><strong>Free</strong><span>Always</span></div>
+      <div><strong>2026</strong><span>Tax Data</span></div>
+      <div><strong>60 sec</strong><span>To Calculate</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="container ad-slot">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-placeholder">Ad Space — 728×90</div>
+</div>
+
+<section class="state-grid-section" id="states">
+  <div class="container">
+    <p class="section-eyebrow">Select Your State</p>
+    <h2 class="section-title">Property Tax Calculator by State</h2>
+    <p class="section-sub">Each state has its own rates, exemptions, and rules. Click yours for a precise calculation.</p>
+    <div class="state-search">
+      <input type="text" id="state-search" placeholder="🔍  Search your state..." oninput="filterStates(this.value)"/>
+    </div>
+    <div class="state-grid" id="state-grid">
+      
+      <a href="alabama-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">AL</div>
+        <div class="state-info">
+          <div class="state-name">Alabama</div>
+          <div class="state-rate">0.41% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="alaska-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">AK</div>
+        <div class="state-info">
+          <div class="state-name">Alaska</div>
+          <div class="state-rate">1.04% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="arizona-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">AZ</div>
+        <div class="state-info">
+          <div class="state-name">Arizona</div>
+          <div class="state-rate">0.51% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="arkansas-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">AR</div>
+        <div class="state-info">
+          <div class="state-name">Arkansas</div>
+          <div class="state-rate">0.61% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="california-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">CA</div>
+        <div class="state-info">
+          <div class="state-name">California</div>
+          <div class="state-rate">0.71% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="colorado-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">CO</div>
+        <div class="state-info">
+          <div class="state-name">Colorado</div>
+          <div class="state-rate">0.49% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="connecticut-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">CT</div>
+        <div class="state-info">
+          <div class="state-name">Connecticut</div>
+          <div class="state-rate">1.79% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="delaware-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">DE</div>
+        <div class="state-info">
+          <div class="state-name">Delaware</div>
+          <div class="state-rate">0.55% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="florida-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">FL</div>
+        <div class="state-info">
+          <div class="state-name">Florida</div>
+          <div class="state-rate">0.8% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="georgia-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">GA</div>
+        <div class="state-info">
+          <div class="state-name">Georgia</div>
+          <div class="state-rate">0.81% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="hawaii-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">HI</div>
+        <div class="state-info">
+          <div class="state-name">Hawaii</div>
+          <div class="state-rate">0.26% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="idaho-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">ID</div>
+        <div class="state-info">
+          <div class="state-name">Idaho</div>
+          <div class="state-rate">0.46% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="illinois-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">IL</div>
+        <div class="state-info">
+          <div class="state-name">Illinois</div>
+          <div class="state-rate">2.07% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="indiana-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">IN</div>
+        <div class="state-info">
+          <div class="state-name">Indiana</div>
+          <div class="state-rate">0.75% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="iowa-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">IA</div>
+        <div class="state-info">
+          <div class="state-name">Iowa</div>
+          <div class="state-rate">1.43% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="kansas-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">KS</div>
+        <div class="state-info">
+          <div class="state-name">Kansas</div>
+          <div class="state-rate">1.33% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="kentucky-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">KY</div>
+        <div class="state-info">
+          <div class="state-name">Kentucky</div>
+          <div class="state-rate">0.8% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="louisiana-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">LA</div>
+        <div class="state-info">
+          <div class="state-name">Louisiana</div>
+          <div class="state-rate">0.51% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="maine-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">ME</div>
+        <div class="state-info">
+          <div class="state-name">Maine</div>
+          <div class="state-rate">1.01% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="maryland-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MD</div>
+        <div class="state-info">
+          <div class="state-name">Maryland</div>
+          <div class="state-rate">1.0% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="massachusetts-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MA</div>
+        <div class="state-info">
+          <div class="state-name">Massachusetts</div>
+          <div class="state-rate">1.04% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="michigan-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MI</div>
+        <div class="state-info">
+          <div class="state-name">Michigan</div>
+          <div class="state-rate">1.44% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="minnesota-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MN</div>
+        <div class="state-info">
+          <div class="state-name">Minnesota</div>
+          <div class="state-rate">0.98% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="mississippi-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MS</div>
+        <div class="state-info">
+          <div class="state-name">Mississippi</div>
+          <div class="state-rate">0.65% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="missouri-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MO</div>
+        <div class="state-info">
+          <div class="state-name">Missouri</div>
+          <div class="state-rate">0.93% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="montana-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">MT</div>
+        <div class="state-info">
+          <div class="state-name">Montana</div>
+          <div class="state-rate">0.74% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="nebraska-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NE</div>
+        <div class="state-info">
+          <div class="state-name">Nebraska</div>
+          <div class="state-rate">1.49% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="nevada-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NV</div>
+        <div class="state-info">
+          <div class="state-name">Nevada</div>
+          <div class="state-rate">0.44% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="new-hampshire-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NH</div>
+        <div class="state-info">
+          <div class="state-name">New Hampshire</div>
+          <div class="state-rate">1.77% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="new-jersey-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NJ</div>
+        <div class="state-info">
+          <div class="state-name">New Jersey</div>
+          <div class="state-rate">2.23% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="new-mexico-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NM</div>
+        <div class="state-info">
+          <div class="state-name">New Mexico</div>
+          <div class="state-rate">0.55% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="new-york-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NY</div>
+        <div class="state-info">
+          <div class="state-name">New York</div>
+          <div class="state-rate">1.4% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="north-carolina-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">NC</div>
+        <div class="state-info">
+          <div class="state-name">North Carolina</div>
+          <div class="state-rate">0.7% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="north-dakota-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">ND</div>
+        <div class="state-info">
+          <div class="state-name">North Dakota</div>
+          <div class="state-rate">0.89% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="ohio-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">OH</div>
+        <div class="state-info">
+          <div class="state-name">Ohio</div>
+          <div class="state-rate">1.41% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="oklahoma-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">OK</div>
+        <div class="state-info">
+          <div class="state-name">Oklahoma</div>
+          <div class="state-rate">0.85% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="oregon-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">OR</div>
+        <div class="state-info">
+          <div class="state-name">Oregon</div>
+          <div class="state-rate">0.82% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="pennsylvania-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">PA</div>
+        <div class="state-info">
+          <div class="state-name">Pennsylvania</div>
+          <div class="state-rate">1.35% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="rhode-island-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">RI</div>
+        <div class="state-info">
+          <div class="state-name">Rhode Island</div>
+          <div class="state-rate">1.3% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="south-carolina-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">SC</div>
+        <div class="state-info">
+          <div class="state-name">South Carolina</div>
+          <div class="state-rate">0.52% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="south-dakota-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">SD</div>
+        <div class="state-info">
+          <div class="state-name">South Dakota</div>
+          <div class="state-rate">1.08% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="tennessee-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">TN</div>
+        <div class="state-info">
+          <div class="state-name">Tennessee</div>
+          <div class="state-rate">0.48% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="texas-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">TX</div>
+        <div class="state-info">
+          <div class="state-name">Texas</div>
+          <div class="state-rate">1.6% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="utah-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">UT</div>
+        <div class="state-info">
+          <div class="state-name">Utah</div>
+          <div class="state-rate">0.52% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="vermont-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">VT</div>
+        <div class="state-info">
+          <div class="state-name">Vermont</div>
+          <div class="state-rate">1.73% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="virginia-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">VA</div>
+        <div class="state-info">
+          <div class="state-name">Virginia</div>
+          <div class="state-rate">0.82% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="washington-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">WA</div>
+        <div class="state-info">
+          <div class="state-name">Washington</div>
+          <div class="state-rate">0.84% avg rate</div>
+        </div>
+        <span class="rate-badge rate-mid">Mid</span>
+      </a>
+      <a href="west-virginia-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">WV</div>
+        <div class="state-info">
+          <div class="state-name">West Virginia</div>
+          <div class="state-rate">0.53% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="wisconsin-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">WI</div>
+        <div class="state-info">
+          <div class="state-name">Wisconsin</div>
+          <div class="state-rate">1.51% avg rate</div>
+        </div>
+        <span class="rate-badge rate-high">High</span>
+      </a>
+      <a href="wyoming-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">WY</div>
+        <div class="state-info">
+          <div class="state-name">Wyoming</div>
+          <div class="state-rate">0.55% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+      <a href="district-of-columbia-property-tax-calculator.html" class="state-card">
+        <div class="state-abbr">DC</div>
+        <div class="state-info">
+          <div class="state-name">District of Columbia</div>
+          <div class="state-rate">0.56% avg rate</div>
+        </div>
+        <span class="rate-badge rate-low">Low</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container ad-slot">
+  <div class="ad-label">Advertisement</div>
+  <div class="ad-placeholder">Ad Space — 728×90</div>
+</div>
+
+<section class="faq-section">
+  <div class="container">
+    <p class="section-eyebrow">Questions</p>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How is property tax calculated?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Property tax = (Home Value x Assessment Ratio) x Tax Rate. Each state sets its own assessment ratio and tax rate. Our calculators use the actual 2026 rates for your specific state and apply any homestead exemptions automatically.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What is a homestead exemption?<span class="faq-icon">+</span></button>
+        <div class="faq-a">A homestead exemption reduces the taxable value of your primary residence, lowering your tax bill. For example, Texas offers a $100,000 homestead exemption — meaning a $300,000 home is taxed as if it were worth $200,000.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Which state has the highest property tax?<span class="faq-icon">+</span></button>
+        <div class="faq-a">New Jersey has the highest effective property tax rate at 2.23%, followed by Illinois (2.07%) and Connecticut (1.79%). Hawaii has the lowest rate at just 0.26%.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Are these 2026 rates accurate?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes. Our data reflects 2026 effective average rates compiled from state tax authorities, county assessor offices, and the Tax Foundation. Individual county rates may vary — always confirm with your local assessor for exact figures.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can seniors get a property tax reduction?<span class="faq-icon">+</span></button>
+        <div class="faq-a">Yes — almost every state offers senior property tax relief. Common programs include exemptions (reducing taxable value), freezes (locking in assessed value), and circuit breakers (capping taxes as a % of income). Our state calculators include senior exemption options.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><div class="logo-mark">🏛️</div>US<span class="accent">TaxCalc</span></a>
+      <p>Free property tax calculators for all 50 US states.</p>
+    </div>
+    <div class="footer-hr"></div>
+    <div class="footer-links">
+      <a href="index.html">All States</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <p class="footer-copy">© 2026 USTaxCalc.app — Free US property tax calculator. For informational purposes only.</p>
+  </div>
+</footer>
+
+<script>
+function toggleDark(){document.body.classList.toggle('dark');var b=document.querySelector('.dark-toggle');b.textContent=document.body.classList.contains('dark')?'☀️':'🌙';localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');}
+window.addEventListener('load',function(){if(localStorage.getItem('theme')==='dark'){document.body.classList.add('dark');var b=document.querySelector('.dark-toggle');if(b)b.textContent='☀️';}} );
+function filterStates(q){var cards=document.querySelectorAll('.state-card');q=q.toLowerCase();cards.forEach(function(c){var name=c.querySelector('.state-name').textContent.toLowerCase();var abbr=c.querySelector('.state-abbr').textContent.toLowerCase();c.style.display=(name.includes(q)||abbr.includes(q))?'':'none';});}
+function toggleFaq(btn){var a=btn.nextElementSibling;var i=btn.querySelector('.faq-icon');var o=a.classList.contains('open');document.querySelectorAll('.faq-a').forEach(function(x){x.classList.remove('open');});document.querySelectorAll('.faq-icon').forEach(function(x){x.textContent='+';} );if(!o){a.classList.add('open');i.textContent='−';}}
+</script>
+</body>
+</html>
