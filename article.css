@@ -35,3 +35,19 @@ body.dark .article-container p,body.dark .article-container li{color:#C0C0D0}
 .article-container .btn-primary:hover {
   color: #ffffff !important;
 }
+
+/* ── CTA button — darker, higher contrast ── */
+.article-cta .btn-primary,
+.article-container .btn-primary {
+  background: #3730A3 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 16px rgba(55,48,163,0.35) !important;
+  font-weight: 800 !important;
+}
+.article-cta .btn-primary:hover,
+.article-container .btn-primary:hover {
+  background: #312E81 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
